@@ -49,6 +49,11 @@ namespace Pawnmorph.Hediffs
 		public float defaultAddChance = 1f;
 
 		/// <summary>
+		///		The gender to preferentially apply this mutation to.
+		/// </summary>
+		public Gender gender = Gender.None;
+
+		/// <summary>
 		///     The default value indicating weather or not this mutation blocks a transformation chain until it is added
 		/// </summary>
 		public bool defaultBlocks = false;

@@ -321,7 +321,7 @@ namespace Pawnmorph.Hediffs
 						continue;
 
 					// Add the mutation (and aspects) if we succeed in the random chance
-					if (Rand.Value < mutation.addChance)
+					if (Rand.Value < mutation.addChance && (mutation.partGender == Gender.None || mutation.partGender == pawn.gender))
 					{
 						MutagenDef mutagen = GetMutagen();
 						MutationResult mutationResult = mutagen.AddMutationAndAspects(pawn, mutation.mutation, bodyPart, this);

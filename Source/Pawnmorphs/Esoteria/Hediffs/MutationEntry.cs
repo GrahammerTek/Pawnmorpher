@@ -29,7 +29,8 @@ namespace Pawnmorph.Hediffs
 			{
 				mutation = mutation,
 				addChance = mutation.defaultAddChance * chanceMult,
-				blocks = mutation.defaultBlocks
+				blocks = mutation.defaultBlocks,
+				partGender = mutation.gender
 			};
 		}
 
@@ -47,6 +48,11 @@ namespace Pawnmorph.Hediffs
 		/// if true, a mutation chain will not progress further until this mutation is added 
 		/// </summary>
 		public bool blocks;
+
+		/// <summary>
+		/// The gender to preferentially apply this mutation to 
+		/// </summary>
+		public Gender partGender;
 
 		/// <summary>
 		/// Exposes the data to be Saved/Loaded from XML.

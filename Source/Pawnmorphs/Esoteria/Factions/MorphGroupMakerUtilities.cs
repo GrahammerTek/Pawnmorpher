@@ -95,7 +95,7 @@ namespace Pawnmorph.Factions
 				mutations = kindExtension.GetRandomMutations(pawn.thingIDNumber).ToList();
 			else
 				mutations = kindExtension.GetRandomMutations(pawn.thingIDNumber)
-										 .Where(g => !g.IsRestricted) //only keep the unrestricted mutations 
+										 .Where(g => !g.IsRestricted && (g.gender == Gender.None || g.gender == pawn.gender)) //only keep the unrestricted mutations 
 										 .ToList();
 
 			if (mutations.Count == 0)
